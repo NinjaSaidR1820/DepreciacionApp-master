@@ -32,11 +32,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
-            this.txtVidaU = new System.Windows.Forms.TextBox();
-            this.txtValorR = new System.Windows.Forms.TextBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtVidaUtilMOD = new System.Windows.Forms.TextBox();
+            this.txtValorResidualMOD = new System.Windows.Forms.TextBox();
+            this.txtValorMOD = new System.Windows.Forms.TextBox();
+            this.txtNombreMOD = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -79,33 +82,33 @@
             this.Nombre.TabIndex = 13;
             this.Nombre.Text = "Nombre";
             // 
-            // txtVidaU
+            // txtVidaUtilMOD
             // 
-            this.txtVidaU.Location = new System.Drawing.Point(189, 191);
-            this.txtVidaU.Name = "txtVidaU";
-            this.txtVidaU.Size = new System.Drawing.Size(100, 20);
-            this.txtVidaU.TabIndex = 12;
+            this.txtVidaUtilMOD.Location = new System.Drawing.Point(189, 191);
+            this.txtVidaUtilMOD.Name = "txtVidaUtilMOD";
+            this.txtVidaUtilMOD.Size = new System.Drawing.Size(100, 20);
+            this.txtVidaUtilMOD.TabIndex = 12;
             // 
-            // txtValorR
+            // txtValorResidualMOD
             // 
-            this.txtValorR.Location = new System.Drawing.Point(189, 150);
-            this.txtValorR.Name = "txtValorR";
-            this.txtValorR.Size = new System.Drawing.Size(100, 20);
-            this.txtValorR.TabIndex = 11;
+            this.txtValorResidualMOD.Location = new System.Drawing.Point(189, 150);
+            this.txtValorResidualMOD.Name = "txtValorResidualMOD";
+            this.txtValorResidualMOD.Size = new System.Drawing.Size(100, 20);
+            this.txtValorResidualMOD.TabIndex = 11;
             // 
-            // txtValor
+            // txtValorMOD
             // 
-            this.txtValor.Location = new System.Drawing.Point(189, 103);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 20);
-            this.txtValor.TabIndex = 10;
+            this.txtValorMOD.Location = new System.Drawing.Point(189, 103);
+            this.txtValorMOD.Name = "txtValorMOD";
+            this.txtValorMOD.Size = new System.Drawing.Size(100, 20);
+            this.txtValorMOD.TabIndex = 10;
             // 
-            // txtNombre
+            // txtNombreMOD
             // 
-            this.txtNombre.Location = new System.Drawing.Point(189, 50);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtNombre.TabIndex = 9;
+            this.txtNombreMOD.Location = new System.Drawing.Point(189, 50);
+            this.txtNombreMOD.Name = "txtNombreMOD";
+            this.txtNombreMOD.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreMOD.TabIndex = 9;
             // 
             // button1
             // 
@@ -118,22 +121,59 @@
             this.button1.TabIndex = 17;
             this.button1.Text = "Modificar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Crimson;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalir.Font = new System.Drawing.Font("Impact", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Location = new System.Drawing.Point(303, 243);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(168, 53);
+            this.btnSalir.TabIndex = 18;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(137, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "ID";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Mongolian Baiti", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.Location = new System.Drawing.Point(195, 21);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(54, 20);
+            this.lblID.TabIndex = 20;
+            this.lblID.Text = "lblID";
             // 
             // Modificar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Cyan;
-            this.ClientSize = new System.Drawing.Size(382, 370);
+            this.ClientSize = new System.Drawing.Size(613, 370);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.txtVidaU);
-            this.Controls.Add(this.txtValorR);
-            this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtVidaUtilMOD);
+            this.Controls.Add(this.txtValorResidualMOD);
+            this.Controls.Add(this.txtValorMOD);
+            this.Controls.Add(this.txtNombreMOD);
             this.Name = "Modificar";
             this.Text = "Modificar";
             this.ResumeLayout(false);
@@ -147,10 +187,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.TextBox txtVidaU;
-        private System.Windows.Forms.TextBox txtValorR;
-        private System.Windows.Forms.TextBox txtValor;
-        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox txtVidaUtilMOD;
+        private System.Windows.Forms.TextBox txtValorResidualMOD;
+        private System.Windows.Forms.TextBox txtValorMOD;
+        private System.Windows.Forms.TextBox txtNombreMOD;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
     }
 }
