@@ -187,13 +187,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Nombre;
-        private System.Windows.Forms.TextBox txtVidaUtilMOD;
-        private System.Windows.Forms.TextBox txtValorResidualMOD;
-        private System.Windows.Forms.TextBox txtValorMOD;
-        private System.Windows.Forms.TextBox txtNombreMOD;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblID;
+        public System.Windows.Forms.TextBox txtVidaUtilMOD;
+        public System.Windows.Forms.TextBox txtValorResidualMOD;
+        public System.Windows.Forms.TextBox txtValorMOD;
+        public System.Windows.Forms.TextBox txtNombreMOD;
     }
 }
