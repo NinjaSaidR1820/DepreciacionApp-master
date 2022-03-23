@@ -30,5 +30,11 @@ namespace AppCore.Services
         {
             return Model.Read();
         }
+
+        public void Update(T t, int id)
+        {
+            Model.Update(t, id);
+        }
+
     }
 }

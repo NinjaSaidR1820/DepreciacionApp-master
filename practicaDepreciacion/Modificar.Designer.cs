@@ -190,10 +190,10 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblID;
         public System.Windows.Forms.TextBox txtVidaUtilMOD;
         public System.Windows.Forms.TextBox txtValorResidualMOD;
         public System.Windows.Forms.TextBox txtValorMOD;
         public System.Windows.Forms.TextBox txtNombreMOD;
+        public System.Windows.Forms.Label lblID;
     }
 }

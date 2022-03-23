@@ -137,5 +137,10 @@ namespace Infraestructure.Repository
             }
 
         }
+
+        public void Update<T>(T t, int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -57,5 +57,17 @@ namespace Infraestructure.Repository
                 throw;
             }
         }
+
+        public void Update<T>(T t, int id)
+        {
+            try
+            {
+                context.Update(t, id);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

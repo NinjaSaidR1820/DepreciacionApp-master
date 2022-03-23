@@ -134,5 +134,40 @@ namespace practicaDepreciacion
         {
             Clean();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.CurrentRow.Selected == false)
+            {
+                MessageBox.Show("Seleccione el Activo que Desea Modificar", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            Modificar mod = new Modificar();
+            mod.activoServices = activoServices;
+            mod.lblID.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            mod.txtNombreMOD.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            mod.txtValorMOD.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            mod.txtVidaUtilMOD.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            mod.txtValorResidualMOD.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+
+            mod.ShowDialog();
+
+            ActualizarLista();
+
+
+        }
+
+        public void ActualizarLista()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = activoServices.Read();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

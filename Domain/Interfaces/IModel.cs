@@ -11,6 +11,6 @@ namespace Domain.Interfaces
         void Add(T t);
         void Delete(T t);
         List<T> Read();
-
+        void Update<T>(T t, int id);
     }
 }
